@@ -17,7 +17,7 @@ app.get("/", function (req, res) {
 app.post("/api/fileanalyse", upload.single("upfile"), async (req, res) => {
   const data = req.file;
   res.json({
-    name: data.filename,
+    name: data.originalname,
     type: data.mimetype,
     size: data.size,
   });
